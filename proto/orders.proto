@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/buzzsurfr/blog-atomize-grpc/orders";
+
+package orders;
+
+service Order {
+    rpc PlaceOrder (PlaceOrderRequest) returns (PlaceOrderReply) {}
+}
+
+message PlaceOrderRequest {
+    int32 customerID = 1;
+    int32 cents = 2;
+}
+
+message PlaceOrderReply {
+
+}

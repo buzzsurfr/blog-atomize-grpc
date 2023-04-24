@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "8bc4cf09-0af6-4176-b6a4-3a0e086ce586",
+		"name": "Atomize-gRPC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "961794"
+	},
+	"item": [
+		{
+			"name": "Get Loyalty Points for customer 1234",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/loyalty/1234",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loyalty",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customerID",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "56.78",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/orders/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

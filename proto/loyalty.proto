@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "github.com/buzzsurfr/blog-atomize-grpc/loyalty";
+
+package loyalty;
+
+service Points {
+    rpc GetPointsForCustomer (GetPointsRequest) returns (GetPointsReply) {}
+    rpc AddPoints (AddPointsRequest) returns (AddPointsReply) {}
+}
+
+message GetPointsRequest {
+    int32 customerID = 1;
+}
+
+message GetPointsReply {
+    int32 customerID = 1;
+    int32 points = 2;
+}
+
+message AddPointsRequest {
+    int32 customerID = 1;
+    int32 points = 2;
+}
+
+message AddPointsReply {}
